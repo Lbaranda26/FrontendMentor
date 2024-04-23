@@ -38,6 +38,7 @@
       height: 100vh;
     }
     .main__container{
+      position: relative;
       background: var(--white);
       width: 100%;
       max-width: 385px;
@@ -48,7 +49,6 @@
       padding:24px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       box-shadow: 8px 8px 0px var(--black);
       border:1px solid var(--black);
     }
@@ -56,6 +56,12 @@
       width: 100%;
       height: 100%;
       border-radius:10px;
+    }
+    .content_container{
+      margin-top:24px;
+      display: flex;
+      flex-direction: column;
+      gap:12px;
     }
     .category__container{
       background: var(--yellow);
@@ -73,11 +79,17 @@
       font-weight:800;
       font-size: 1.4rem;
     }
+    .title__container:hover{
+      color:var(--yellow);
+      cursor: pointer;
+    }
     .description__container{
       color:var(--grey);
       font-weight: 500;
     }
     .avatar__container{
+      position: absolute;
+      bottom:24px;
       display: flex;
       align-items: center;
       gap:12px;
@@ -100,21 +112,20 @@
 <body>
   <main class="main__container">
     <picture class="image__container">
-      <img class="image__main" src="assets/images/illustration-article.svg">
+      <img class="image__main" src="assets/images/illustration-article.svg" alt="illistrator image">
     </picture>
     <div class="content_container">
-
+      <p class="category__container">
+        Learning
+      </p>
+      <p class="date__container">
+        Published 21 Dec 2023
+      </p>
+      <h1 class="title__container">
+        HTML & CSS foundations
+      </h1>
+      <p class="description__container">These languages are the backbone of every website, defining structure, content, and presentation.</p>
     </div>
-    <p class="category__container">
-      Learning
-    </p>
-    <p class="date__container">
-      Published 21 Dec 2023
-    </p>
-    <h1 class="title__container">
-      HTML & CSS foundations
-    </h1>
-    <p class="description__container">These languages are the backbone of every website, defining structure, content, and presentation.</p>
     <section class="avatar__container">
       <img class="avatar__image" src="assets/images/image-avatar.webp" alt="Photo of Greg Hooper">
       <p class="avatar__name">Greg Hooper</p>
