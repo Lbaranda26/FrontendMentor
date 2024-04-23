@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social links profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --green: hsl(75, 94%, 57%);
+      --white: hsl(0, 0%, 100%);
+      --grey: hsl(0, 0%, 20%);
+      --darkgrey: hsl(0, 0%, 12%);
+      --offblack: hsl(0, 0%, 8%);
+    }
+    *{
+      box-sizing: border-box;
+      margin:0;
+      padding:0;
+    }
+    body{
+      background: var(--offblack);
+      font-size: 14px;
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+      font-variation-settings:"slnt" 0;
+      display:grid;
+      place-content: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    .card__container{
+      background: var(--darkgrey);
+      border-radius:12px;
+      width: 100%;
+      max-width: 384px;
+      min-width: 350px;
+      height: 611px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:24px;
+      padding:40px;
+      text-align: center;
+    }
+    .card__image{
+      width: 88px;
+      height: 88px;
+      border-radius:100%;
+    }
+    .profile__container > *{
+      margin-bottom:8px;
+    }
+    .profile__name{
+      color:var(--white);
+      font-weight: 700;
+    }
+    .profile__location{
+      color:var(--green);
+      font-weight: 600;
+    }
+    .bio__content{
+      color:var(--white);
+      font-weight: 400;
+    }
+    .links__container{
+      display: flex;
+      flex-direction: column;
+      gap:16px;
+      width: 100%;
+    }
+    .links{
+      color:var(--white);
+      text-decoration: none;
+      background: var(--grey);
+      padding:10px;
+      border-radius:8px;
+      font-size: 1.2rem;
+    }
+    .links:hover{
+      background: var(--green);
+      color:var(--offblack);
+      font-weight: 700;
+    }
+
+    @media only screen and (max-width: 375px) {
+      body {
+          padding:0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card__container">
+    <img class="card__image" src="assets/images/avatar-jessica.jpeg" alt="Jessica Randall Photo">      
+    <div class="profile__container">
+      <h1 class="profile__name">Jessica Randall</h1>
+      <p class="profile__location">London, United Kingdom</p>
+    </div>
+    <section class="bio__container">
+      <p class="bio__content">"Front-end developer and avid reader."</p>
+    </section>
+    <nav class="links__container">
+      <a class="links" href="#">GitHub</a>
+      <a class="links" href="#">Frontend Mentor</a>
+      <a class="links" href="#">LinkedIn</a>
+      <a class="links" href="#">Twitter</a>
+      <a class="links" href="#">Instagram</a>
+    </nav>
+  </main>
+</body>
+</html>
