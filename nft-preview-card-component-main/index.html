@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --softblue: hsl(215, 51%, 70%);
+      --cyan: hsl(178, 100%, 50%);
+      --verydarkblue-mainbg: hsl(217, 54%, 11%);
+      --verydarkblue-cardbg: hsl(216, 50%, 16%);
+      --verydarkblue-line: hsl(215, 32%, 27%);
+      --white: hsl(0, 0%, 100%);
+    }
+    *{
+      box-sizing: border-box;
+      margin:0;
+      padding:0;
+    }
+    body{
+      background: var(--verydarkblue-mainbg);
+      font-size: 18px;
+      font-family: "Outfit", sans-serif;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:20px;
+    }
+    .wrapper{
+      margin:0 auto;
+      width: 350px;
+      max-width: 100%;
+      background: var(--verydarkblue-cardbg);
+      padding:25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap:30px;
+      border-radius:15px;
+      position:relative;
+    }
+    .wrapper::before{
+      content:'';
+      position:absolute;
+      left:-15px;
+      width: 380px;
+      max-width: 100%;
+      height:640px;
+      background: hsla(0, 0%, 0%, 20%);
+      z-index:-1;
+      border-radius:15px;
+    }
+    .wrapper::after{
+      content:'';
+      position:absolute;
+      top:-30px;
+      left:-50px;
+      width: 450px;
+      max-width: 100%;
+      height:750px;
+      background: hsl(0, 0%, 0%,10%);
+      z-index:-2;
+      border-radius:15px;
+    }
+    .hero__container{
+      position:relative;
+      height: 300px;
+    }
+    .hero__image{
+      width:100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    .hero__container:hover .hero__view{
+      opacity: 1;
+      cursor: pointer;
+    }
+    .hero__view{
+      opacity: 0;
+      background:hsl(178, 100%, 50%, 50%);
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      border-radius:10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image__view{}
+    .header__text{
+      color:var(--white);
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .header__text:hover{
+      color:var(--cyan);
+      cursor: pointer;
+    }
+    .content__text{
+      color:var(--softblue);
+      font-weight: 200;
+    }
+    .priceday__container{
+     display: flex;
+     justify-content: space-between; 
+    }
+    .price__container{
+      display: flex;
+      align-items: center;
+      gap:10px;
+    }
+    .price__image{}
+    .price__text{
+      color:var(--cyan);
+    }
+    .day__container{
+      display: flex;
+      align-items: center;
+      gap:10px;
+    }
+    .day__image{}
+    .day__text{
+      color: var(--softblue);
+    }
+    .line{
+      background: var(--verydarkblue-line);
+      width: 100%;
+      height: 1px;
+    }
+    .avatar__container{
+      display: flex;
+      align-items: center;
+      gap:10px;
+    }
+    .avatar__image{
+      width: 30px;
+      height: 30px;
+      border:1px solid var(--white);
+      border-radius: 100%;
+    }
+    .avatar__text{
+      color:var(--softblue);
+      font-weight: 400;
+    }
+    a{
+      color:var(--white);
+      text-decoration: none;
+    }
+    a:hover{
+      color:var(--cyan);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <picture class="hero__container">
+      <img class="hero__image" src="images/image-equilibrium.jpg" alt="Equilibrium">
+      <div class="hero__view">
+        <img class="view__image" src="images/icon-view.svg" alt="view image">
+      </div>
+    </picture>
+
+    <h1 class="header__text">Equilibrium #3429</h1>
+
+    <p class="content__text">Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="priceday__container">
+      <div class="price__container">
+        <img class="price__image" src="images/icon-ethereum.svg" alt="etherium price">
+        <p class="price__text">0.041 ETH</p>
+      </div>
+      <div class="day__container">
+        <img class="day__image" src="images/icon-clock.svg" alt="Clock">
+        <p class="day__text">3 days left</p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="avatar__container">
+      <img class="avatar__image" src="images/image-avatar.png" alt="Avatar">
+      <p class="avatar__text">Creation of <a href="#">Jules Wyvern</a></p>
+    </div>
+
+  </div>
+</body>
+</html>
