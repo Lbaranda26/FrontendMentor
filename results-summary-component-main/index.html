@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --lightred: hsl(0, 100%, 67%);
+      --orangeyyellow: hsl(39, 100%, 56%);
+      --greenteal: hsl(166, 100%, 37%);
+      --cobaltblue: hsl(234, 85%, 45%);
+      --t-lightred: hsl(0, 100%, 67%, 10%);
+      --t-orangeyyellow: hsl(39, 100%, 56%, 10%);
+      --t-greenteal: hsl(166, 100%, 37%, 10%);
+      --t-cobaltblue: hsl(234, 85%, 45%, 10%);
+      --white: hsl(0, 0%, 100%);
+      --paleblue: hsl(221, 100%, 96%);
+      --lightlavender: hsl(241, 100%, 89%);
+      --darkgrayblue: hsl(224, 30%, 27%);
+      --lightslateblue-background: hsl(252, 100%, 67%);
+      --lightroyalblue-background: hsl(241, 81%, 54%);
+      --violetblue-circle: hsla(256, 72%, 46%, 1);
+      --persianblue-circle: hsla(241, 72%, 46%, 0);
+    }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-size: 18px;
+    }
+    body{
+      width: 100vw;
+      height: 100vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Hanken Grotesk", sans-serif;
+    }
+    .wrapper{
+      display: flex;
+      box-shadow: 10px 10px 20px hsl(0, 0%, 0%, 10%);
+      border-radius:30px;
+      width: 600px;
+    }
+    .left__container{
+      flex-basis: 50%;
+      text-align: center;
+      background: linear-gradient(to top, var(--lightroyalblue-background), var(--lightslateblue-background));
+      border-radius: 30px;
+      padding:40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header__text{
+      font-size: 1rem;
+      color:var(--lightlavender);
+      font-weight: 800;
+      margin-bottom:auto;
+    }
+    .score__container{
+      background: linear-gradient(to top, var(--persianblue-circle), var(--violetblue-circle));
+      border-radius: 100%;
+      width:150px;
+      height:150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin:auto 0;
+    }
+    .score__text{
+      color:var(--white);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .subscore__text{
+      color:var(--lightlavender);
+      font-size: 0.6rem;
+    }
+    .message__container{
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+      margin-top:auto
+    }
+    .subheader__text{
+      color:var(--white);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .message__text{
+      width: 190px;
+      color:var(--lightlavender);
+      font-size: 0.75rem;
+      line-height: 150%;
+    }
+    .right__container{
+      flex-basis: 50%;
+      padding:40px;
+      background:var(--white);      
+      border-radius:0 30px 30px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap:20px;
+    }
+    .right__container .header__text{
+      color:var(--darkgrayblue);
+    }
+    .summary__container{
+      display: flex;
+      align-items: center;
+      padding:10px;
+      border-radius:10px;
+    }
+    .summary__container.tred{background:var(--t-lightred);}
+    .summary__container.tyellow{background: var(--t-orangeyyellow);}
+    .summary__container.tgreen{background: var(--t-greenteal);}
+    .summary__container.tblue{background: var(--t-cobaltblue);}
+    .summary__image{
+      width: 20px;
+      height: 20px;
+      margin-right:10px;
+    }
+    .summary__text{
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .summary__text.red{color:var(--lightred);}
+    .summary__text.yellow{color:var(--orangeyyellow);}
+    .summary__text.green{color:var(--greenteal);}
+    .summary__text.blue{color:var(--cobaltblue);}
+    .summary__score{
+      margin-left:auto;
+      color:#aeaeae;
+      font-weight: 500;
+    }
+    .summary__score_bold{
+      color:var(--darkgrayblue);
+      font-weight: 800;
+    }
+    .summary__button{
+      border:0;
+      padding:10px;
+      border-radius:50px;
+      background: var(--darkgrayblue);
+      color:var(--white);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .summary__button:hover{
+      background: linear-gradient(to top, var(--lightroyalblue-background), var(--lightslateblue-background));
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 500px) {
+      body{
+        width: 100%;
+        height: 100%;
+      }
+      .wrapper{
+        flex-direction: column;
+      }
+      .left__container{
+        border-radius: 0px 0px 30px 30px;
+      }
+      .right__container{
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="left__container">
+      <h1 class="header__text">Your Result</h1>
+      <div class="score__container">
+        <p class="score__text">76</p>
+        <p class="subscore__text">of 100</p>
+      </div>
+      <div class="message__container">
+        <h2 class="subheader__text">Great</h2>
+        <p class="message__text">You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+    </section>
+    <section class="right__container">
+      <h1 class="header__text">Summary</h1>
+      <div class="summary__container tred">
+        <img class="summary__image" src="assets/images/icon-reaction.svg" alt="reaction">
+        <p class="summary__text red">Reaction</p>
+        <p class="summary__score"><span class="summary__score_bold">80</span> / 100</p>
+      </div>
+      <div class="summary__container tyellow">
+        <img class="summary__image" src="assets/images/icon-memory.svg" alt="memory">
+        <p class="summary__text yellow">Memory</p>
+        <p class="summary__score"><span class="summary__score_bold">92</span> / 100</p>
+      </div>
+      <div class="summary__container tgreen">
+        <img class="summary__image" src="assets/images/icon-verbal.svg" alt="verbal">
+        <p class="summary__text green">Verbal</p>
+        <p class="summary__score"><span class="summary__score_bold">61</span> / 100</p>
+      </div>
+      <div class="summary__container tblue">
+        <img class="summary__image" src="assets/images/icon-visual.svg" alt="visual">
+        <p class="summary__text blue">Visual</p>
+        <p class="summary__score"><span class="summary__score_bold">72</span> / 100</p>
+      </div>
+      <button class="summary__button">Continue</button>
+    </section>    
+  </div>
+</body>
+</html>
