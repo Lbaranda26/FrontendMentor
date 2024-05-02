@@ -1,0 +1,106 @@
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightgrey: hsl(217, 12%, 63%);
+    --mediumgrey: hsl(216, 12%, 54%);
+    --darkblue: hsl(213, 19%, 18%);
+    --verydarkblue: hsl(216, 12%, 8%);
+    --backgroundcolor:#29333d;
+  }
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  body{
+    background: var(--verydarkblue);
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Overpass", sans-serif;
+    padding:20px;
+  }
+  .wrapper{
+    background: var(--darkblue);
+    padding:30px;
+    border-radius:30px;
+    width: 400px;
+    max-width: 100%;
+  }
+  .rating__container{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+  }
+  .rating__image{
+    height: 50px;
+    width: 50px;
+    background: var(--backgroundcolor);
+    padding:15px;
+    border-radius: 100%;
+  }
+  .rating__title{
+    color:var(--white);
+    font-weight: 700;
+  }
+  .rating__message{
+    color:var(--mediumgrey);
+    line-height: 150%;
+  }
+  .rate__container{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .rate__number{
+    background: var(--backgroundcolor);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:100%;
+    color:var(--lightgrey);
+    font-size: 1rem;
+    font-weight: 700;
+   }
+   .rate__number:hover{
+    background: var(--orange);
+    color:var(--white);
+    cursor: pointer;
+   }
+  .rating__button{
+    border:0;
+    outline: 0;
+    height: 45px;
+    background: var(--orange);
+    color:var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius:20px;
+    cursor: pointer;
+  }
+  .rating__button:hover{
+    background: var(--white);
+    color:var(--orange);
+  }
+  .thankyou__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap:20px;
+  }
+  .thankyou__image{}
+  .thankyou__selected{
+    background: var(--backgroundcolor);
+    color:var(--orange);
+    padding:10px 20px;
+    border-radius:20px;
+  }
+
+  .hide{display: none;}
