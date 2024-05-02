@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --cyan: hsl(179, 62%, 43%);
+      --cyanlight:#4abebd;
+      --brightyellow: hsl(71, 73%, 54%);
+      --lightgray: hsl(204, 43%, 93%);
+      --grayishblue: hsl(218, 22%, 67%);
+      --white:#ffffff;
+      font-size: 16px;
+    }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    body{
+      background: var(--lightgray);
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Karla", sans-serif;
+    }
+    .wrapper{
+      width: 670px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .top__container{
+      background: var(--white);
+      padding:45px;
+      grid-column: 1 / 3;
+      border-radius: 10px 10px 0 0;
+    }
+    .top__headertext{
+      color:var(--cyan);
+      margin-bottom:30px;
+    }
+    .titletext{
+      color:var(--brightyellow);
+      font-size: 1.2rem;
+    }
+    .top__container .titletext{
+      margin-bottom:20px;
+    }
+    .messagetext{
+      color:var(--grayishblue);
+      line-height: 150%;
+    }
+    .left__container{
+      background: var(--cyan);
+      padding:45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap:20px;
+      border-radius: 0 0 0 10px;
+    }
+    .left__container .titletext{
+      color:var(--white);
+    }
+    .left__container .messagetext{
+      color:var(--white);
+    }
+    .price__container{
+      display: flex;
+      align-items: center;
+      gap:10px;
+    }
+    .price__container .messagetext{
+      color: var(--lightgray);
+    }
+    .bignumbertext{
+      color:var(--white);
+      font-size: 2rem;
+    }
+    .right__container{
+      background: var(--cyanlight);
+      padding:45px;
+      border-radius: 0 0 10px 0;
+    }
+    .right__container .titletext{
+      color:var(--white);
+      margin-bottom:20px;
+    }
+    .button__signup{
+      border:0;
+      background: var(--brightyellow);
+      color:var(--white);
+      height: 50px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: -2px 4px 8px hsl(0, 0%, 0%, 20%);
+    }
+    .button__signup:hover{
+      background: var(--grayishblue);
+    }
+    .right__ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap:10px;
+    }
+    .right__li{
+      list-style: none;
+      color: var(--lightgray);
+    }
+    a{
+      color: var(--lightgray);
+      text-decoration: none;
+    }
+    @media only screen and (max-width: 500px) {
+      body{
+        padding:40px;
+        height: 100%;
+      }
+      .wrapper{
+        grid-template-columns: 1fr;
+      }
+      .top__container{
+        grid-column: 1 / 2;
+      }
+      .left__container{
+        border-radius: 0;
+      }
+      .right__container{
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="top__container">
+      <h1 class="top__headertext">Join our community</h1>
+      <h2 class="titletext">30-day, hassle-free money back guarantee</h2>
+      <p class="messagetext">Gain access to our full library of tutorials along with expert code reviews. 
+        Perfect for any developers who are serious about honing their skills.</p>
+    </div>
+    <div class="left__container">
+      <h2 class="titletext">Monthly Subscription</h2>
+      <div class="price__container">
+        <span class="bignumbertext">&dollar;29</span>
+        <p class="messagetext">per month</p>
+      </div>
+      <p class="messagetext">Full access for less than &dollar;1 a day</p>
+      <button class="button__signup">Sign Up</button>
+    </div>
+    <div class="right__container">
+        <h2 class="titletext">Why Us</h2>
+        <ul class="right__ul">
+          <li class="right__li"><a href="#">Tutorials by industry experts</a></li>
+          <li class="right__li"><a href="#">Peer &amp; expert code review</a></li>
+          <li class="right__li"><a href="#">Coding exercises</a></li>
+          <li class="right__li"><a href="#">Access to our GitHub repos</a></li>
+          <li class="right__li"><a href="#">Community forum</a></li>
+          <li class="right__li"><a href="#">Flashcard decks</a></li>
+          <li class="right__li"><a href="#">New videos every week</a></li>
+        </ul>
+    </div>
+  </div>
+</body>
+</html>
