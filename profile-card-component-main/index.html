@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --darkcyan: hsl(185, 75%, 39%);
+      --verydarkdesaturatedblue: hsl(229, 23%, 23%);
+      --darkgrayishblue: hsl(227, 10%, 46%);
+      --darkgray: hsl(0, 0%, 59%);
+    }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: "Kumbh Sans", sans-serif;
+      font-size: 18px;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--darkcyan);
+      position: relative;
+    }
+    ul,li{
+      list-style: none;
+      list-style-type: none;
+    }
+    .pattern__top{
+      position: fixed;
+      top:-300px;
+      left:-50px;
+      z-index: -1;
+    }
+    .pattern__top_image{
+      width: 50vw;
+      height: 100vh;
+    }
+    .pattern__bottom{
+      position: fixed;
+      bottom:-500px;
+      right:-220px;
+      z-index:-1;
+    }
+    .pattern__bottom_image{
+      width: 70vw;
+      height: 120vh;
+    }
+    .wrapper{
+      width: 350px;
+      max-width: 100%;
+      height: auto;
+      background-image: url("images/bg-pattern-card.svg"); /* The image used */
+      background-color: #fff; /* Used if the image is unavailable */
+      background-position: top center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: contain; /* Resize the background image to cover the entire container */
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+      text-align: center;
+      padding-bottom:30px;
+      letter-spacing: 1px;
+    }
+    .avatar__container{
+      margin-top: 80px;
+    }
+    .avatar__image{
+      border-radius: 100%;
+      border:5px solid #fff;
+    }
+    .profile__container{
+      margin-bottom:auto;
+      letter-spacing: 0px;
+    }
+    .profile__name{
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom:5px;
+      color: var(--verydarkdesaturatedblue);
+    }
+    .profile__highlight{
+      color:var(--darkgray);
+      margin-left:5px;
+    }
+    .profile__location{
+      color:var(--darkgray);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .bottom__container{
+      border-top:1px solid var(--darkgray);
+      padding:0 50px;
+      padding-top:20px;
+    }
+    .bottom__ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .bottom__li{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .bottom__bigtext{
+      color: var(--verydarkdesaturatedblue);
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .bottom__smalltext{
+      color:var(--darkgray);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    @media only screen and (max-width:600px) {
+      body{
+        padding:0 20px;
+      }
+      .pattern__top{
+        position: fixed;
+        top:-350px;
+        left:-250px;
+      }
+      .pattern__top_image{
+        width: 100vw;
+        height: 100vh;
+      }
+      .pattern__bottom{
+        position: fixed;
+        bottom:-400px;
+        right:-250px;
+      }
+      .pattern__bottom_image{
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+    @media only screen and (max-width:320px) {
+      .pattern__top{
+        left:-200px;
+      }
+      .pattern__bottom{
+        right:-150px;
+      }
+      .profile__name{
+        font-size: 1.2rem;
+      }
+      .profile__location{
+        font-size: 1.2rem;
+      }
+      .bottom__bigtext{
+        font-size: 1rem;
+      }
+      .bottom__smalltext{
+        font-size: 0.6rem;
+      }
+   }
+  </style>
+</head>
+<body>
+  <picture class="pattern__top">
+    <img class="pattern__top_image" src="images/bg-pattern-top.svg">
+  </picture>
+  <main class="wrapper">
+    <header class="avatar__container">
+      <img class="avatar__image" src="images/image-victor.jpg" alt="avatar image">
+    </header>
+    
+    <main class="profile__container">
+      <h2 class="profile__name">Victor Crest <span class="profile__highlight">26</span></h2>
+      <p class="profile__location">London</p>
+    </main>
+
+    <footer class="bottom__container">
+      <ul class="bottom__ul">
+        <li class="bottom__li">
+          <p class="bottom__bigtext">80K</p>
+          <p class="bottom__smalltext">Followers</p>
+        </li>
+        <li class="bottom__li">
+          <p class="bottom__bigtext">803K</p>
+          <p class="bottom__smalltext">Likes</p>        
+        </li>
+        <li class="bottom__li">
+          <p class="bottom__bigtext">1.4K</p>
+          <p class="bottom__smalltext">Photos</p>
+        </li>
+      </ul>
+    </footer>
+  </main>
+  <picture class="pattern__bottom">
+    <img class="pattern__bottom_image" src="images/bg-pattern-bottom.svg">
+  </picture>
+</body>
+</html>
