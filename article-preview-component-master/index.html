@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Article preview component</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <picture class="drawer__container"></picture>
+    <section class="content__container">
+      <header class="header__container">
+        <h1 class="header__title">Shift the overall look and feel by adding these wonderful 
+          touches to furniture in your home
+        </h1>
+      </header>
+      <main class="paragraph__container">
+        <p class="paragraph__message">Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.</p>
+      </main>
+      <footer class="author__container">
+          <img class="author__image" src="images/avatar-michelle.jpg" alt="avatar-michelle">
+          <div class="author__wrapper">
+            <p class="author__name">Michelle Appleton</p>
+            <p class="author__date">28 Jun 2020</p>
+          </div>
+          <button class="author__button">
+            <img class="author__button_image" src="images/icon-share.svg" alt="share">
+          </button>
+
+          <div class="socialmedia__container hide">
+            <p class="socialmedia__text">Share</p>
+            <img class="socialmedia__image" src="images/icon-facebook.svg" alt="facebook">
+            <img class="socialmedia__image" src="images/icon-twitter.svg" alt="twitter">
+            <img class="socialmedia__image" src="images/icon-pinterest.svg" alt="pinterest">
+            <button class="author__button author__button_mobile">
+              <img class="author__button_image mobile__button_image" src="images/icon-share.svg" alt="share">
+            </button>  
+          </div>
+          
+      </footer>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
