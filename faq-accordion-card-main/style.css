@@ -1,0 +1,101 @@
+:root{
+    --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+    --Softred: hsl(14, 88%, 65%);
+    --Softviolet: hsl(273, 75%, 66%);
+    --Softblue: hsl(240, 73%, 65%);
+    --Verydarkgrayishblue: hsl(237, 12%, 33%);
+    --Darkgrayishblue: hsl(240, 6%, 50%);
+    --Lightgrayishblue: hsl(240, 5%, 91%);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 12px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:40px;
+
+    background: linear-gradient(to bottom, var(--Softviolet), var(--Softblue));
+}
+.wrapper{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:50px;
+    padding-left:0;
+    border-radius:20px;
+    width: 960px;
+    height: 500px;
+
+    background-image: url("images/bg-pattern-desktop.svg"); /* The image used */
+    background-position: -500px -300px;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 90% 180%; /* Resize the background image to cover the entire container */
+}
+
+.left{
+    position: relative;
+}
+.bigimage__container{
+    overflow: hidden;
+}
+.bigimage{
+    translate:-80px 0px;
+}
+.smallimage__container{
+    position: absolute;
+    top:140px;
+    left:-92px;
+    z-index: 2;
+}
+.smallimage{
+
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom:50px;
+}
+.dropdown__container{
+    border-bottom: 1px solid var(--Lightgrayishblue);
+    padding-bottom:10px;
+}
+.question__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:10px;
+    cursor: pointer;
+}
+.question__title{
+    margin-bottom:20px;
+    font-weight: 400;
+}
+.question__title_highlight{
+    font-weight: 700;
+}
+.arrow__{}
+.arrow__down{}
+.arrow__up{
+    rotate: 180deg;
+}
+.answer__text{
+    width: 80%;
+}
+
+.hide{
+    display: none;
+}
