@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style-desktop.css">
+  <link rel="stylesheet" href="style-mobile.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header__container">
+      <h1 class="header__title">Learn to code by <br/> watching others</h1>
+      <p class="header__content">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable.</p>
+    </header>
+    <main class="main__container">
+      <div class="offer__container">
+        <p class="offer__text"><span class="offer__text_highlight">Try it free 7 days</span> then $20/mo. thereafter</p>
+      </div>
+      <div class="registration__container">
+        <div class="registration__wrapper">
+          <input class="registration__input" type="text" placeholder="First Name">
+          <img class="registration__error_image hide" src="images/icon-error.svg"/>
+          <p class="registration__error_text hide">First Name cannot be empty</p>
+        </div>
+        <div class="registration__wrapper">
+          <input class="registration__input" type="text" placeholder="Last Name">
+          <img class="registration__error_image hide" src="images/icon-error.svg"/>
+          <p class="registration__error_text hide">Last Name cannot be empty</p>
+        </div>
+        <div class="registration__wrapper">
+          <input class="registration__input" type="email" placeholder="Email Address">
+          <img class="registration__error_image hide" src="images/icon-error.svg"/>
+          <p class="registration__error_text hide">Looks like this is not an email</p>
+        </div>
+        <div class="registration__wrapper">
+          <input class="registration__input" type="password" placeholder="Password">
+          <img class="registration__error_image hide" src="images/icon-error.svg"/>
+          <p class="registration__error_text hide">Password cannot be empty</p>
+        </div>
+         
+        <button class="registration__button">Claim your free trial</button> 
+      
+        <p class="registration__terms">By clicking the button, you are agreeing to our <a class="registration__terms_highlight" href="#">Terms and Services</a></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
