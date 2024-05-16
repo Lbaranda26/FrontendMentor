@@ -37,9 +37,11 @@ body{
 }
 .header__title{
     font-size: 50px;
+    line-height: 120%;
+    margin-bottom:11px;
 }
 .header__content{
-    line-height: 150%;
+    line-height: 200%;
 }
 .main__container{
     flex-basis: 50%;
