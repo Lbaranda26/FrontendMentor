@@ -1,0 +1,13 @@
+@media only screen and (max-width: 750px) {
+    body{
+        font-size: 14px;
+        padding:50px 20px;
+    }
+    .two__rows{
+        flex-direction: column;
+    }
+    .detail__radio__wrapper{
+        gap:0px;
+        margin-bottom: 5px;
+    }
+}

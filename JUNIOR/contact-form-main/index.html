@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile-style.css">
+</head>
+<body>
+  <div class="wrapper">
+    
+    <header class="header__container">
+      <h1 class="header__title">Contact Us</h1>
+    </header>
+
+    <main class="main__container">
+
+      <div class="two__rows container__margin__bottom">
+        <div class="detail_wrapper">
+          <div class="two__column">
+            <label class="detail__label" for="firstname">First Name</label>
+            <input class="detail__input" type="text" id="firstname">
+          </div>
+          <div class="detail__error hide">This field is required</div>
+        </div>
+        
+        <div class="detail_wrapper">
+          <div class="two__column">
+            <label class="detail__label" for="lastname">Last Name</label>
+            <input class="detail__input" type="text" id="lastname">
+          </div>
+          <div class="detail__error hide">This field is required</div>
+        </div>
+      </div>
+  
+      <div class="detail_wrapper container__margin__bottom">
+        <label class="detail__label">Email Address</label>
+        <input class="detail__input" type="email" id="emailaddress">
+        <div class="detail__email__error hide">Please enter a valid email address</div>
+        <div class="detail__error hide">This field is required</div>
+      </div>
+  
+      <div class="detail_wrapper container__margin__bottom">
+        <label class="detail__label" for="querytype">Query Type</label>
+        
+        <div class="two__rows">
+          <div class="detail__radio__wrapper">
+            <input class="detail__radio__input" type="radio" id="generalinquiry" name="querytype">
+            <label class="detail__radio__label" for="generalinquiry">General Enquiry</label>
+          </div>
+          <div class="detail__radio__wrapper">
+            <input class="detail__radio__input" type="radio" id="supportrequest" name="querytype">
+            <label class="detail__radio__label" for="supportrequest">Support Request</label>
+          </div>
+        </div>
+
+        <div class="detail__error hide">Please select a query type</div>
+      </div>
+  
+      <div class="detail_wrapper container__margin__bottom_45">
+        <label class="detail__label" for="detail__textarea">Message</label>
+        <textarea class="detail__textarea" id="detail__textarea"></textarea>
+        <div class="detail__error hide">This field is required</div>
+      </div>
+
+      <div class="detail_wrapper container__margin__bottom_45">
+        <div class="detail__checkbox__wrapper">
+          <input class="detail__checkbox" type="checkbox" id="consent">
+          <label class="detail__checkbox__label" for="consent">I consent to being contacted by the team</label>
+        </div>
+        <div class="detail__error hide">To submit this form, please consent to being contacted</div>
+      </div>
+    </main>
+
+    <footer class="footer__container">
+      <button class="submit__button">Submit</button>
+    </footer>
+
+    <section class="successform__container hide">
+      <div class="successform__wrapper">
+        <img src="assets/images/icon-success-check.svg" alt="checked">
+        <p class="successform__title">Message Sent!</p>
+      </div>
+      <p class="successform__message">Thanks for completing the form. We'll be in touch soon!</p>
+    </section>
+    
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
