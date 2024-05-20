@@ -124,7 +124,9 @@ body{
 .detail__checkbox{
     margin-bottom: 15px;
 }
-.detail__checkbox__label{}
+.detail__checkbox__label{
+    color:var(--Green);
+}
 
 .footer__container{}
 .submit__button{
