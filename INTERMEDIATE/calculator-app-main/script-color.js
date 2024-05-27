@@ -15,8 +15,9 @@ numberWrapper.forEach((i, e) => {
     });
     numberWrapper[e].addEventListener("mouseleave", () => {
         numberWrapper[e].style.backgroundColor = "var(--theme--one-numbg)";
-    })
+    });
 });
+
 numberDel.addEventListener("mouseenter", () => {
     numberDel.style.backgroundColor = "var(--theme--one-numbgResetDelHover)";        
 });
@@ -36,11 +37,25 @@ numberEqual.addEventListener("mouseleave", () => {
     numberEqual.style.backgroundColor = "var(--theme--one-secondaryhl)";        
 });
 
-themeSlider.addEventListener("click", () => {
 
+themeSlider.oninput = function() {   
     setData(slider.value);
+};
 
-    if(themeSlider.value === "1"){
+//
+function setData(x){
+
+    if (x === "1"){
+        style.innerHTML = "theme__slider::-webkit-slider-thumb { background: var(--theme--one-secondaryhl) }";
+
+        themeSlider.addEventListener("mouseenter", () => {
+            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--one-toggleHover) }";
+        });
+        themeSlider.addEventListener("mouseleave", () => {
+            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(var--theme--one-secondaryhl)) }";
+        });
+
+
         bodyColor.style.backgroundColor = "var(--theme--one-body)";
         title.style.color = "var(--theme--one-text)";
         themeTitle.style.color = "var(--theme--one-text)";
@@ -96,8 +111,17 @@ themeSlider.addEventListener("click", () => {
         numberEqual.addEventListener("mouseleave", () => {
             numberEqual.style.backgroundColor = "var(--theme--one-secondaryhl)";        
         });
+    
+    }else if (x === "2"){
+        style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--two-secondaryhl) }";
 
-    }else if(themeSlider.value === "2"){
+        themeSlider.addEventListener("mouseenter", () => {
+            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--two-toggleHover) }";
+        });
+        themeSlider.addEventListener("mouseleave", () => {
+            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(var--theme--two-secondaryhl)) }";
+        });
+
         bodyColor.style.backgroundColor = "var(--theme--two-body)";
         title.style.color = "var(--theme--two-text)";
         themeTitle.style.color = "var(--theme--two-text)";
@@ -156,7 +180,16 @@ themeSlider.addEventListener("click", () => {
             numberEqual.style.backgroundColor = "var(--theme--two-secondaryhl)";        
         });
 
-    }else if(themeSlider.value === "3"){
+    }else if (x === "3"){
+        style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--three-secondaryhl) }";
+
+        themeSlider.addEventListener("mouseenter", () => {
+            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--three-toggleHover) }";
+        });
+        themeSlider.addEventListener("mouseleave", () => {
+            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(var--theme--three-secondaryhl)) }";
+        });
+
         bodyColor.style.backgroundColor = "var(--theme--three-body)";
         title.style.color = "var(--theme--three-text)";
         themeTitle.style.color = "var(--theme--three-text)";
@@ -213,41 +246,7 @@ themeSlider.addEventListener("click", () => {
             numberEqual.style.backgroundColor = "var(--theme--three-secondaryhl)";        
         });
     }
-});
 
 
-
-//
-function setData(x){
-    if (x === "1"){
-        style.innerHTML = "theme__slider::-webkit-slider-thumb { background: var(--theme--one-secondaryhl) }";
-
-        themeSlider.addEventListener("mouseenter", () => {
-            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--one-toggleHover) }";
-        });
-        themeSlider.addEventListener("mouseleave", () => {
-            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(var--theme--one-secondaryhl)) }";
-        });
-    
-    }else if (x === "2"){
-        style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--two-secondaryhl) }";
-
-        themeSlider.addEventListener("mouseenter", () => {
-            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--two-toggleHover) }";
-        });
-        themeSlider.addEventListener("mouseleave", () => {
-            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(var--theme--two-secondaryhl)) }";
-        });
-
-    }else if (x === "3"){
-        style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--three-secondaryhl) }";
-
-        themeSlider.addEventListener("mouseenter", () => {
-            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(--theme--three-toggleHover) }";
-        });
-        themeSlider.addEventListener("mouseleave", () => {
-            style.innerHTML = ".theme__slider::-webkit-slider-thumb { background: var(var--theme--three-secondaryhl)) }";
-        });
-    }
-}
+};
 //
