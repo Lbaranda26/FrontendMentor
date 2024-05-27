@@ -1,0 +1,57 @@
+<hmtl>
+    <head>
+        <style type="text/css">
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+}
+.slider {
+    margin-top: 40px;
+    -webkit-appearance: none;
+    width: 200px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+}  
+        </style>
+    </head>
+    <body>
+
+        <style data="test" type="text/css">
+        </style>
+        
+        <input type="range" min="1" max="3" value="1" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+
+        <script>
+
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            var style = document.querySelector('[data="test"]');
+
+            
+            slider.addEventListener("click", () => {
+                setData(slider.value);
+            })
+
+            function setData(x){
+                //output.innerHTML = x;
+                if (x === "1"){
+                    style.innerHTML = ".slider::-webkit-slider-thumb { background: red }";
+                }else if (x === "2"){
+                    style.innerHTML = ".slider::-webkit-slider-thumb { background: green }";
+                }else if (x === "3"){
+                    style.innerHTML = ".slider::-webkit-slider-thumb { background: orange }";
+                }
+            }
+
+        </script>
+    </body>
+</hmtl>

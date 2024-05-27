@@ -7,14 +7,60 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Calculator app</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
 
+  <div class="wrapper">
+    <header class="header__container">
+      <h1 class="title">calc</h1>
 
+      <div class="theme__container">
+        <p class="theme__title">THEME</p>
+        <div class="theme__label__container">
+          <label class="theme__label">1</label>
+          <label class="theme__label">2</label>
+          <label class="theme__label">3</label>
+        </div>
+        <style data="test" type="text/css"></style>
+        <input type="range" min="1" max="3" value="1" class="theme__slider" id="slider">
+      </div>
+    </header>
+
+    <input type="text" class="total">
+
+      <div class="number__container">
+        <div class="number__wrapper">7</div>
+        <div class="number__wrapper">8</div>
+        <div class="number__wrapper">9</div>
+        <div class="number__wrapper number__del">DEL</div>
+
+        <div class="number__wrapper">4</div>
+        <div class="number__wrapper">5</div>
+        <div class="number__wrapper">6</div>
+        <div class="number__wrapper">+</div>
   
+        <div class="number__wrapper">1</div>
+        <div class="number__wrapper">2</div>
+        <div class="number__wrapper">3</div>
+        <div class="number__wrapper">-</div>
+
+        <div class="number__wrapper">.</div>
+        <div class="number__wrapper">0</div>
+        <div class="number__wrapper">/</div>
+        <div class="number__wrapper">x</div>
+
+        <div class="number__wrapper number__reset">RESET</div>
+        <div class="number__wrapper number__equal">=</div>
+      </div>
+
+  </div>
   <script src="script.js"></script>
+  <script src="script-color.js"></script>
 </body>
 </html>

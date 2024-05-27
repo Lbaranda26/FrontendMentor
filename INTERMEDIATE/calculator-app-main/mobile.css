@@ -1,0 +1,28 @@
+@media only screen and (max-width: 620px) {
+    body{
+        height: 100%;
+        padding:20px;
+    }
+    .number__container{
+        padding:20px;
+        gap:13px;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .total{
+        font-size: 40px;
+    }
+    .number__wrapper{
+        width: 60px;
+        font-size: 32px;
+    }
+    .number__reset{
+        min-width: 133px;
+    }
+    .number__equal{
+        min-width: 133px;
+    }
+}
