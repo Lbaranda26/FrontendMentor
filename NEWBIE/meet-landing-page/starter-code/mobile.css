@@ -120,6 +120,8 @@
     }
     .sectionimage__image{
         border-radius: 8px;
+        min-height: 143px;
+        max-width: 151px;
     }
 
     .section__title{

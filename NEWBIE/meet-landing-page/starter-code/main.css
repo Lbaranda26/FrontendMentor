@@ -159,13 +159,17 @@ button:hover .button__text_highlight{
 }
 .sectionimage__container{
     width: 1110px;
+    max-width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top:89px;
     display: grid;
     gap:25px;
 }
 .sectionimage__image{
+    object-fit: cover;
     border-radius: 8px;
+    min-height: 242px;
+    max-width: 255px;
 }
 
 .section__title{
