@@ -130,10 +130,12 @@
         margin-bottom:24px;
     }
     .section__subtitle{
+        width: 100%;        
         font-weight: bolder;
         margin-bottom:32px;
     }
     .section__message{
+        width: 100%;
         color:var(--grey);
     }
 
