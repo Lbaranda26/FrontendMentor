@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Meet landing page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="tablet.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header__container">
+
+      <picture class="logo__container">
+        <img class="logo__image" src="assets/logo.svg" alt="meet">
+      </picture>
+
+      <div class="hero__container">
+
+        <picture class="heroimage__container">
+          <source media="(max-width: 768px)" srcset="assets/tablet/image-hero.png" />
+          <source media="(min-width: 769px)" srcset="assets/desktop/image-hero-left.png" />
+          <img class="heroimage__image" src="assets/desktop/image-hero-left.png" alt="group of people">
+        </picture>
+
+        <div class="heromessage__container">
+          <h1 class="heromessage__title">Group Chat <br/> for Everyone</h1>
+          <p class="heromessage__caption">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+          <div class="herobutton__container">
+            <button class="heromessage__button1 button1">Download <span class="button__text_highlight">v1.3</button>
+              <button class="heromessage__button2 button2">What is it?</button>
+          </div>
+        </div>
+
+        <picture class="heroimage__container heroimage__container_right">
+          <img class="heroimage__image" src="assets/desktop/image-hero-right.png" alt="group of people">
+        </picture>        
+
+
+
+      </div>
+
+    </header>
+
+    <main class="main__container">
+
+      <section class="section__container">
+        <div class="sectionnumber__container">
+          <div class="sectionnumber__line"></div>
+          <p class="sectionnumber">01</p>
+        </div>
+        <div class="sectionimage__container">
+          <img class="sectionimage__image" src="assets/desktop/image-woman-in-videocall.jpg" alt="image-woman-in-videocall">
+          <img class="sectionimage__image" src="assets/desktop/image-women-videochatting.jpg" alt="image-women-videochatting">
+          <img class="sectionimage__image" src="assets/desktop/image-men-in-meeting.jpg" alt="image-man-texting">
+          <img class="sectionimage__image" src="assets/desktop/image-man-texting.jpg" alt="image-man-texting">
+        </div>
+        </section>
+      
+      <section class="section__container">
+        <p class="section__title">Built for modern use</p>
+        <h2 class="section__subtitle">Smarter meetings, all in one place</h2>
+        <p class="section__message">Send messages, share files, show your screen, and record your meetings — all in one 
+        workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+      </section>
+    </main>
+
+    <footer class="footer__container">
+      <div class="sectionnumber__container">
+        <div class="sectionnumber__line"></div>
+        <p class="sectionnumber">02</p>
+      </div>
+      <div class="footertext__container">
+        <source media="(max-width: 375px)" srcset="assets/mobile/image-footer.jpg" />
+        <source media="(min-width: 376px)" srcset="assets/desktop/image-footer.jpg" />
+        <img class="footertext__image" src="assets/desktop/image-footer.jpg">
+        
+        <div class="footertext__wrapper">
+          <h2 class="footertext__title">Experience more together</h2>
+          <p class="footertext__message">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+          <button class="button2">Download v1.3</button>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

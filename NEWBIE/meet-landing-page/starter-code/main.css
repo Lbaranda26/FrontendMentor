@@ -1,0 +1,221 @@
+:root{
+    --teal:#4D96A9;
+    --teal-opacity:hsl(192, 37%, 48%, 80%);
+    --dark-purple:#855FB1;
+    --dark-blue:#28283D;
+    --grey:#87879D;
+    --grey-opacity:hsl(240, 10%, 57%, 25%);
+    --sky-blue:#8FE3F9;
+    --light-purple:#D9B8FF;
+    --white: #FAFAFA;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+}
+button{
+    border:none;
+    height: 58px;
+    width: 193px;
+    border-radius:29px;
+    cursor: pointer;
+}
+.button1{
+    background: var(--teal);
+    color:var(--white);
+}
+.button1:hover{
+    background: var(--sky-blue);
+}
+.button2{
+    background: var(--dark-purple);
+    color:var(--white);
+}
+.button2:hover{
+    background: var(--light-purple);
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+h1{font-size: 64px;}
+h2{font-size: 40px;}
+p{font-size: 18px; line-height: 150%;}
+.wrapper{
+    padding-top:48px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.header__container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+.logo__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:54px;
+}
+.logo__image{
+    width: 119px;
+    height: 28px;
+}
+
+.hero__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.heroimage__container{
+    margin-bottom: 48px;
+    overflow: hidden;
+}
+.heroimage__container_right .heroimage__image{
+    translate: 0px 0px;
+}
+.heroimage__image{
+    width: 110%;
+    translate: -40px 0px;
+}
+.heromessage__container{
+    margin:0 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heromessage__title{
+    margin-bottom:28px;
+    font-weight: bold;
+    font-size: 40px;
+    color:var(--dark-blue);
+}
+.heromessage__caption{
+    margin-bottom:32px;
+    line-height: 200%;
+    color:var(--grey);
+    font-weight: 600;
+    padding:0 20px;
+}
+.herobutton__container{
+    display: flex;
+    gap:16px;
+}
+.heromessage__button1{
+    margin-bottom:16px;
+}
+.heromessage__button2{
+    width: 139px;
+}
+.button__text_highlight{
+    color:var(--sky-blue)
+}
+button:hover .button__text_highlight{
+    color:var(--white);
+}
+
+.section__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0 20px;
+    text-align: center;
+    margin-bottom:64px;
+}
+.sectionnumber__container{
+    position: relative;
+    top:25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 140px;
+    width: 100px;
+}
+.sectionnumber__line{
+    background: var(--grey-opacity);
+    width: 1px;
+    height: 84px;
+}
+.sectionnumber{
+    background: var(--white);
+    border:1px solid var(--grey-opacity);
+    border-radius:100%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--dark-blue);
+    font-weight: 600;
+}
+.sectionimage__container{
+    width: 1110px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top:89px;
+    display: grid;
+    gap:25px;
+}
+.sectionimage__image{
+    border-radius: 8px;
+}
+
+.section__title{
+    color: var(--teal);
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom:24px;
+}
+.section__subtitle{
+    width: 28%;
+
+    font-weight: bolder;
+    margin-bottom:32px;
+}
+.section__message{
+    width: 50%;
+
+    color:var(--grey);
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.footertext__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background: var(--teal-opacity);
+}
+.footertext__image{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index:-1;
+    object-fit: cover;
+}
+.footertext__wrapper{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding:89px 0;
+}
+.footertext__title{
+    margin-bottom:24px;
+    color:var(--white);
+    font-weight: bolder;
+}
+.footertext__message{
+    margin-bottom:32px;
+    color:var(--white);
+}
