@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Pod request access landing page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tablet.css">
+  <link rel="stylesheet" href="mobile.css1">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="main__container">
+      <header class="logo__container">
+        <img class="logo__image" src="assets/desktop/logo.svg" alt="pod">
+      </header>
+
+      <div class="content__container">
+        <section class="title__container">
+          <h1 class="title__text"><div class="highlight">Publish your podcasts</div> everywhere.</h1>
+        </section>
+
+        <section class="message__container">
+          <p class="message__text">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+            Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+        </section>
+
+        <div class="button__wrapper">
+          <section class="button__container">
+            <input class="button__email form__default" type="text" placeholder="Email address">
+            <button class="button__button button__default">Request access</button>  
+          </section>
+          <div class="error__text">Oops! Please check your email</div>
+        </div>
+
+        <ul class="sponsor__container">
+          <li class="sponsor__li"><img class="sponsor__image" src="assets/desktop/spotify.svg" alt="spotify"></li>
+          <li class="sponsor__li"><img class="sponsor__image" src="assets/desktop/apple-podcast.svg" alt="apple-podcast"></li>
+          <li class="sponsor__li"><img class="sponsor__image" src="assets/desktop/google-podcasts.svg" alt="google-podcasts"></li>
+          <li class="sponsor__li"><img class="sponsor__image" src="assets/desktop/pocket-casts.svg" alt="pocket-casts"></li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="background__container">
+      <source media="(max-width: 768px)" srcset="assets/tablet/image-host.jpg" />
+      <source media="(min-width: 769px)" srcset="assets/desktop/image-host.jpg" />
+      <img class="background__image" src="assets/desktop/image-host.jpg">
+    </aside>
+
+    <div class="bgpatterndots__container">
+      <img class="bgpatterndots__image" src="assets/desktop/bg-pattern-dots.svg">
+    </div>
+
+  </div>
+</body>
+</html>
