@@ -1,0 +1,141 @@
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    
+    font-size:16px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ul,li{
+    list-style: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body{
+    background: var(--CharcoalGrey);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.wrapper{
+    width: 800px;
+    background: var(--White);
+    border-radius:20px;
+    display: flex;
+}
+.article__container{
+    padding:50px;
+}
+.article__header{
+    margin-bottom:20px;
+}
+.article__title{
+    font-size: 3rem;
+    color: var(--DarkSlateGrey);
+    margin-bottom:20px;
+}
+.article__subtitle{
+    color:var(--CharcoalGrey);
+    line-height: 150%;
+}
+.article__main{
+    margin-bottom:20px;
+}
+.article__ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:15px;
+}
+.article__li{
+    position: relative;
+    margin-left:30px;
+}
+.article__li::before{
+    content:'';
+    position: absolute;
+    left:-30px;
+    background: url(assets/images/icon-list.svg) no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.article__footer{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.email__container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.label__container{
+    display: flex;
+    justify-content: space-between;
+}
+.email__label{
+    color:var(--DarkSlateGrey);
+    font-weight: 700;
+}
+.email__error{
+    color:var(--Tomato);
+}
+.email__input{
+    padding:10px;
+    font-size: 1.2rem;
+    border:1px solid var(--Grey);
+    border-radius:5px;
+}
+.email__input_correct{
+    background: green;
+    color:#000;
+    border:1px solid var(--Grey);
+}
+.email__input_correct::placeholder{
+    color:var(--Grey);
+    font-weight: 700;
+}
+.email__input_error{
+    background: rgb(253, 226, 221);
+    color:var(--Tomato);
+    border:1px solid var(--Tomato);
+}
+.email__input_error::placeholder{
+    color:var(--Tomato);
+    font-weight: 700;
+}
+
+.article__button{
+    border-radius:5px;
+    background: var(--DarkSlateGrey);
+    border:0;
+    outline: 0;
+    color:var(--White);
+    width: 100%;
+    padding:15px;
+    cursor: pointer;
+}
+
+.picture__container{
+    padding:20px;
+}
+
+.hide{
+    display: none !important;
+}
+.show{
+    display: block;
+}

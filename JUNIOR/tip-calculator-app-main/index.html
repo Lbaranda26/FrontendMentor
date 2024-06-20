@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header__container">
+      <img class="header__image" src="images/logo.svg" alt="SPLITTER">
+    </header>
+    
+    <main class="main__container">
+
+      <div class="input__container">
+        <section class="bill__container">
+          <p class="bill__title">Bill</p>
+          <div class="bill__input_container">
+            <img class="bill__input_icon" src="images/icon-dollar.svg" alt="dollar" />
+            <input class="bill__input" type="number" placeholder="0">
+          </div>
+        </section>
+        <section class="tipselection__container">
+          <p class="tipselection__title">Select Tip %</p>
+          <div class="buttonselection__container">
+            <label class="buttonselection__label" for="five__percent">5%</label>
+            <input type="radio" name="select__percent" value=".05" id="five__percent" class="buttonselection__button">
+            <label class="buttonselection__label" for="ten__percent">10%</label>
+            <input type="radio" name="select__percent" value=".10" id="ten__percent" class="buttonselection__button">   
+            <label class="buttonselection__label" for="fifteen__percent">15%</label>
+            <input type="radio" name="select__percent" value=".15" id="fifteen__percent" class="buttonselection__button">   
+            <label class="buttonselection__label" for="twentyfive__percent">25%</label>
+            <input type="radio" name="select__percent" value=".25" id="twentyfive__percent" class="buttonselection__button">   
+            <label class="buttonselection__label" for="fifty__percent">50%</label>
+            <input type="radio" name="select__percent" value=".50" id="fifty__percent" class="buttonselection__button">
+            <input type="number" class="buttonselection__input" placeholder="Custom">   
+          </div>
+        </section>
+        <section class="numofpeople__container">
+          <p class="numofpeople__title">Number of People</p>
+          <p class="numofpeople__text_error hide">Can’t be zero</p>
+          <div class="numofpeople__input_container">
+            <img class="numofpeople__icon" src="images/icon-person.svg" alt="user icon" />
+            <input class="numofpeople__input" type="number">
+          </div>
+        </section>
+      </div>
+
+      <div class="total__wrapper">
+
+        <div class="tip__container">
+          <div class="tip__title__container">
+            <p class="tip__title">Tip Amount</p>
+            <div class="tip__subtitle">/ person</div>  
+          </div>
+          <p class="tip__total">0.00</p>
+        </div>
+    
+        <div class="total__container">
+          <div class="total__title__container">
+            <p class="total__title">Total</p>
+            <div class="total__subtitle">/ person</div>
+          </div>
+          <p class="total__total">0.00</p>
+        </div>
+        
+        <button class="reset__button">Reset</button>
+
+      </div>
+
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

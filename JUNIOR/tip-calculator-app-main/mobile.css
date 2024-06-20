@@ -1,0 +1,24 @@
+@media only screen and (max-width: 750px) {
+    .header__container{
+        margin-top:20px;
+        margin-bottom:50px;
+    }
+    .main__container{
+        flex-direction: column;
+    }
+    .total__container{
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .buttonselection__container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .buttonselection__container{
+        grid-template-columns: 1fr;
+    }
+}
